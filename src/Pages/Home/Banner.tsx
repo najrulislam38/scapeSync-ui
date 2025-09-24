@@ -7,7 +7,7 @@ import vection from "./../../assets/images/Vector.png";
 
 const Banner = () => {
   return (
-    <section className=" relative bg-linear-to-r from-white to-[#FCFFFC] ">
+    <section className=" relative bg-linear-to-r from-white to-[#FCFFFC]  overflow-hidden">
       <Container>
         <div className="relative h-screen">
           <div className="h-full flex items-center space-y-6">
@@ -20,7 +20,7 @@ const Banner = () => {
                 <img src={vection} alt="Vector" />
               </div>
 
-              <p className="max-w-xl text-lg text-gray-500 mb-14">
+              <p className="max-w-xl text-lg text-gray-600 mb-14">
                 Built for business owners, employees, and clients to streamline
                 job scheduling, service tracking, and team management in one
                 powerful app powerful app.
@@ -41,13 +41,14 @@ const Banner = () => {
           {/* Right Side Image */}
         </div>
       </Container>
-      <div className="hidden lg:block">
-        <div className="absolute hidden md:block bottom-0 right-10 mt-12 flex justify-center lg:mt-0">
+      <div className="hidden relative lg:block">
+        <div className="absolute md:block bottom-0 right-10 mt-12 flex justify-center lg:mt-0">
           <img
             src={bannerImage}
             alt="App Preview"
             className="max-w-4xl drop-shadow-2xl"
           />
+          <div className="h-1/5 w-full z-20 bg-linear-to-t from-[#FCFFFC] to-transparent absolute right-0 bottom-0  opacity-90"></div>
         </div>
       </div>
     </section>

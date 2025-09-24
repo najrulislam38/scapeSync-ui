@@ -5,9 +5,9 @@ import Container from "@/components/Shared/Container";
 
 export default function Navbar() {
   return (
-    <header>
+    <header className="fixed top-0 z-50 w-full bg-white">
       <Container>
-        <div className="flex justify-between items-center p-4 ">
+        <div className="flex justify-between items-center py-4 ">
           <Link to={"/"}>
             <img src={navImage} alt="" />
           </Link>
