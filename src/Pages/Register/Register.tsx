@@ -7,6 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Link, useNavigate } from "react-router";
 import { axiosInstance } from "@/lib/axios";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const registerSchema = z
   .object({
@@ -25,7 +27,10 @@ const registerSchema = z
   });
 
 export default function Register() {
+  const [showPass, setShowPass] = useState<true | false>(false);
+  const [showConfirmPass, setShowConfirmPass] = useState<true | false>(false);
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -66,7 +71,7 @@ export default function Register() {
     <div>
       <img src={logo} alt="logo" loading="lazy" className="py-6 px-8 " />
 
-      <div className="mt-20">
+      <div className="mt-16 mb-20">
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">
           Create your Account
         </h2>
@@ -138,12 +143,23 @@ export default function Register() {
               </div>
               <div className="relative z-0 w-full mb-5 group">
                 <input
-                  type="password"
+                  type={`${showPass ? "text" : "password"}`}
                   id="password"
                   className="block py-2.5 px-0 w-full text-normal text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-primary peer"
                   placeholder=" "
                   {...register("password")}
                 />
+                {!showPass ? (
+                  <FaEye
+                    onClick={() => setShowPass(true)}
+                    className=" absolute top-3 right-5 text-xl cursor-pointer hover:text-primary hover:transition-all duration-200"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={() => setShowPass(false)}
+                    className=" absolute top-3 right-5 text-xl cursor-pointer hover:text-primary hover:transition-all duration-200"
+                  />
+                )}
                 {errors.password && (
                   <p className="text-red-500 text-xs">
                     {errors.password.message}
@@ -158,12 +174,28 @@ export default function Register() {
               </div>
               <div className="relative z-0 w-full mb-10 group">
                 <input
-                  type="password"
+                  type={`${showConfirmPass ? "text" : "password"}`}
                   id="password_confirmation"
                   className="block py-2.5 px-0 w-full text-normal text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-primary peer"
                   placeholder=" "
                   {...register("password_confirmation")}
                 />
+                {!showConfirmPass ? (
+                  <FaEye
+                    onClick={() => setShowConfirmPass(true)}
+                    className=" absolute top-3 right-5 text-xl cursor-pointer hover:text-primary hover:transition-all duration-200"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={() => setShowConfirmPass(false)}
+                    className=" absolute top-3 right-5 text-xl cursor-pointer hover:text-primary hover:transition-all duration-200"
+                  />
+                )}
+                {errors.password_confirmation && (
+                  <p className="text-red-500 text-xs">
+                    {errors.password_confirmation.message}
+                  </p>
+                )}
                 {errors.password_confirmation && (
                   <p className="text-red-500 text-xs">
                     {errors.password_confirmation.message}

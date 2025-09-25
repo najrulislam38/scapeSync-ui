@@ -7,6 +7,8 @@ import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { axiosInstance } from "@/lib/axios";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -16,7 +18,9 @@ const loginSchema = z.object({
 });
 
 export default function Login() {
+  const [showPass, setShowPass] = useState<true | false>(false);
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -82,12 +86,23 @@ export default function Login() {
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
                   <input
-                    type="password"
+                    type={`${showPass ? "text" : "password"}`}
                     id="password"
                     className="block py-2.5 px-0 w-full text-normal text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-primary peer"
                     placeholder=" "
                     {...register("password")}
                   />
+                  {!showPass ? (
+                    <FaEye
+                      onClick={() => setShowPass(true)}
+                      className=" absolute top-3 right-5 text-xl cursor-pointer hover:text-primary hover:transition-all duration-200"
+                    />
+                  ) : (
+                    <FaEyeSlash
+                      onClick={() => setShowPass(false)}
+                      className=" absolute top-3 right-5 text-xl cursor-pointer hover:text-primary hover:transition-all duration-200"
+                    />
+                  )}
                   {errors.password && (
                     <p className="text-red-500 text-xs">
                       {errors.password.message}

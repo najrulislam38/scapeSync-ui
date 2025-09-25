@@ -12,14 +12,14 @@ export default function AccountCreatedSuccessful() {
           <img src={successImg} alt="success image" className="w-fit mx-auto" />
 
           <h2 className="text-center text-gray-900 font-bold text-3xl my-4">
-            Account Created Successfully!
+            Password Changed Successfully!
           </h2>
           <p className="text-gray-600 text-center">
             Your account is set up! Just verify your email to get started.
           </p>
 
-          <Link to={"/"} className="">
-            <Button className="text-center w-full mt-10">Go To Home</Button>
+          <Link to={"/login"} className="">
+            <Button className="text-center w-full mt-10">Go To Login</Button>
           </Link>
         </div>
       </div>

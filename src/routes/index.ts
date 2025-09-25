@@ -5,6 +5,7 @@ import GetStart from "@/Pages/GetStart/GetStart";
 import Home from "@/Pages/Home/Home";
 import Login from "@/Pages/Login/Login";
 import Register from "@/Pages/Register/Register";
+import ResetPassword from "@/Pages/ResetPassword/ResetPassword";
 import Verify from "@/Pages/Verify/Verify";
 
 import { createBrowserRouter } from "react-router";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/forgot-password",
         Component: ForgotPassword,
+      },
+      {
+        path: "/reset-password",
+        Component: ResetPassword,
       },
       {
         path: "/created-successful",
