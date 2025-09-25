@@ -8,7 +8,7 @@ import SeeTask from "./Features/SeeTask";
 
 export default function Features() {
   return (
-    <div className="py-20">
+    <div className="py-10 md:py-20">
       <Container>
         <div className=" md:mb-20 mb-10">
           <div className="relative">

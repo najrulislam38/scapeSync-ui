@@ -1,6 +1,9 @@
 import Banner from "./Banner";
+import FAQ from "./FAQ";
 import Features from "./Featurs";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Reviews from "./Reviews";
 import Services from "./Services";
 
 export default function Home() {
@@ -10,6 +13,9 @@ export default function Home() {
       <Banner />
       <Services />
       <Features />
+      <Reviews />
+      <FAQ />
+      <Footer />
     </div>
   );
 }

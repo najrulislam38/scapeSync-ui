@@ -29,74 +29,74 @@ export default function Services() {
                   d="M16 2L16 6M8 2L8 6"
                   fillRule="nonzero"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M16 2L16 6M8 2L8 6"
                   fillRule="nonzero"
                   stroke="rgb(0,0,0)"
-                  stroke-opacity="0.200000003"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeOpacity="0.200000003"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M11 4C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12L3 14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22L13 22C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14L21 12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4L11 4Z"
                   fillRule="nonzero"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M11 4C7.22876 4 5.34315 4 4.17157 5.17157C3 6.34315 3 8.22876 3 12L3 14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22L13 22C16.7712 22 18.6569 22 19.8284 20.8284C21 19.6569 21 17.7712 21 14L21 12C21 8.22876 21 6.34315 19.8284 5.17157C18.6569 4 16.7712 4 13 4L11 4Z"
                   fillRule="nonzero"
                   stroke="rgb(0,0,0)"
-                  stroke-opacity="0.200000003"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeOpacity="0.200000003"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M3 10L21 10"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M3 10L21 10"
                   stroke="rgb(0,0,0)"
-                  stroke-opacity="0.200000003"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeOpacity="0.200000003"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M9 16.5C9 16.5 10.5 17 11 18.5C11 18.5 13.1765 14.5 16 13.5"
                   fillRule="nonzero"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M9 16.5C9 16.5 10.5 17 11 18.5C11 18.5 13.1765 14.5 16 13.5"
                   fillRule="nonzero"
                   stroke="rgb(0,0,0)"
-                  stroke-opacity="0.200000003"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeOpacity="0.200000003"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
               </svg>
             </div>
@@ -200,16 +200,16 @@ export default function Services() {
                   d="M22.75 22.75L10.8333 22.75C7.25852 22.75 5.4711 22.75 4.36056 21.6395C3.25 20.5288 3.25 18.7415 3.25 15.1667L3.25 3.25"
                   fillRule="nonzero"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M6.5 7.58335C7.2296 6.36836 8.21938 5.41669 9.74222 5.41669C16.1806 5.41669 12.5617 18.4167 19.4804 18.4167C21.0141 18.4167 21.9978 17.4587 22.75 16.25"
                   fillRule="nonzero"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeWidth="2"
                 />
               </svg>
             </div>
@@ -245,17 +245,17 @@ export default function Services() {
                   d="M21 6.12325C21 5.34825 20.4145 4.70502 19.6551 4.57302C16.595 4.04108 14.0546 2.85772 12.8152 2.20154C12.3077 1.93282 11.6923 1.93282 11.1848 2.20154C9.94542 2.85772 7.40502 4.04108 4.34489 4.57302C3.58552 4.70502 3 5.34825 3 6.12325L3 11.0511C3 17.4795 9.53762 20.9859 11.4689 21.8815C11.8097 22.0395 12.1903 22.0395 12.5311 21.8815C14.4624 20.9859 21 17.4795 21 11.0511L21 6.12325Z"
                   fillRule="nonzero"
                   stroke="rgb(59,163,52)"
-                  stroke-linecap="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Vector"
                   d="M21 6.12325C21 5.34825 20.4145 4.70502 19.6551 4.57302C16.595 4.04108 14.0546 2.85772 12.8152 2.20154C12.3077 1.93282 11.6923 1.93282 11.1848 2.20154C9.94542 2.85772 7.40502 4.04108 4.34489 4.57302C3.58552 4.70502 3 5.34825 3 6.12325L3 11.0511C3 17.4795 9.53762 20.9859 11.4689 21.8815C11.8097 22.0395 12.1903 22.0395 12.5311 21.8815C14.4624 20.9859 21 17.4795 21 11.0511L21 6.12325Z"
                   fillRule="nonzero"
                   stroke="rgb(0,0,0)"
-                  stroke-opacity="0.200000003"
-                  stroke-linecap="round"
-                  stroke-width="2"
+                  strokeOpacity="0.200000003"
+                  strokeLinecap="round"
+                  strokeWidth="2"
                 />
               </svg>
             </div>
