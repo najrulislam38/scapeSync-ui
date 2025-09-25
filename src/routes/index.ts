@@ -1,6 +1,7 @@
 import Root from "@/components/layout/Root";
 import GetStart from "@/Pages/GetStart/GetStart";
 import Home from "@/Pages/Home/Home";
+import Register from "@/Pages/Register/Register";
 import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/get-started",
         Component: GetStart,
+      },
+      {
+        path: "/register",
+        Component: Register,
       },
     ],
   },
