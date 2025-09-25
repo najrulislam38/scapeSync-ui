@@ -69,7 +69,13 @@ export default function Register() {
 
   return (
     <div>
-      <img src={logo} alt="logo" loading="lazy" className="py-6 px-8 " />
+      <img
+        onClick={() => navigate("/")}
+        src={logo}
+        alt="logo"
+        loading="lazy"
+        className="py-6 px-8 w-fit cursor-pointer"
+      />
 
       <div className="mt-16 mb-20">
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">

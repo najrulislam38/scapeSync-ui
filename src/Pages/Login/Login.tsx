@@ -52,7 +52,13 @@ export default function Login() {
   };
   return (
     <div className="w-full h-screen">
-      <img src={logo} alt="logo" loading="lazy" className="py-6 px-8 " />
+      <img
+        onClick={() => navigate("/")}
+        src={logo}
+        alt="logo"
+        loading="lazy"
+        className="py-6 px-8  cursor-pointer"
+      />
       <div className="w-full h-fit mt-20 flex items-center justify-center">
         <div>
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">

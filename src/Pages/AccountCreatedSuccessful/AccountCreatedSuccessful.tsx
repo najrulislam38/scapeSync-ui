@@ -1,12 +1,21 @@
 import { Button } from "@/components/ui/button";
 import logo from "./../../assets/images/image 7.svg";
 import successImg from "./../../assets/images/success.png";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function AccountCreatedSuccessful() {
+  const navigate = useNavigate();
+
   return (
-    <div className="w-full h-dvh">
-      <img src={logo} alt="logo" loading="lazy" className="py-6 px-8 " />
+    <div className=" w-full h-dvh">
+      <img
+        onClick={() => navigate("/")}
+        src={logo}
+        alt="logo"
+        loading="lazy"
+        className="py-6 px-8  cursor-pointer"
+      />
+
       <div>
         <div className="max-w-[480px] mx-auto">
           <img src={successImg} alt="success image" className="w-fit mx-auto" />

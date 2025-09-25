@@ -54,9 +54,10 @@ export default function ResetPassword() {
     <div className="w-full h-dvh relative">
       <img
         src={logo}
+        onClick={() => navigate("/")}
         alt="logo"
         loading="lazy"
-        className="py-6 px-8 absolute top-6 left-8 "
+        className="py-6 px-8 absolute top-6 left-8  cursor-pointer "
       />
       <div className="h-full w-full flex justify-center items-center">
         <form
