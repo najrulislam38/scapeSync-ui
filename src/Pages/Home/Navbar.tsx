@@ -9,7 +9,7 @@ export default function Navbar() {
       <Container>
         <div className="flex justify-between items-center py-4 ">
           <Link to={"/"}>
-            <img src={navImage} alt="" />
+            <img src={navImage} alt="logo" loading="lazy" />
           </Link>
           <Link to={"/get-started"}>
             <Button> Get Start</Button>

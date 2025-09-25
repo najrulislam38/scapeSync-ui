@@ -11,12 +11,12 @@ export default function Features() {
     <div className="py-10 md:py-20">
       <Container>
         <div className=" md:mb-20 mb-10">
-          <div className="relative">
+          <div className="relative max-w-3xl mx-auto">
             <SectionTitle title="Build for Everyone" />
             <img
               src={frame}
               alt=""
-              className="absolute bottom-2 left-1/2 -z-2"
+              className="absolute bottom-2 left-1/2 -z-2 w-2/6"
             />
           </div>
           <SectionDescription description="Whether you're booking services, managing tasks, or running operations, we've designed the perfect experience for you." />

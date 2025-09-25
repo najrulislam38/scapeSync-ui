@@ -31,6 +31,7 @@ export default function SeeTask() {
           src={featureImage}
           alt="Book Service feature image"
           className="w-fit"
+          loading="lazy"
         />
         <div className="h-1/5 w-full z-20 bg-linear-to-t from-[#FCFFFC] to-transparent absolute right-0 bottom-0"></div>
       </div>
