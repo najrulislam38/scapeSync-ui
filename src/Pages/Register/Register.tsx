@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import logo from "./../../assets/images/image 7.svg";
 import googleImg from "../../assets/images/google.png";
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { axiosInstance } from "@/lib/axios";
+import toast from "react-hot-toast";
 
 const registerSchema = z
   .object({
@@ -23,6 +25,7 @@ const registerSchema = z
   });
 
 export default function Register() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -39,12 +42,22 @@ export default function Register() {
   });
 
   const onSubmit = async (values: z.infer<typeof register>) => {
-    console.log(values);
-
     try {
+      console.log(values);
       const res = await axiosInstance.post("/register", values);
-      console.log(res.data);
-    } catch (error) {
+
+      console.log(res);
+
+      if (
+        res?.status === 201 ||
+        res?.data?.status === 201 ||
+        res?.data?.data?.status === 201
+      ) {
+        toast.success("Created Successful");
+        navigate("/verify-otp");
+      }
+    } catch (error: any) {
+      toast.error(`${error?.message}`);
       console.log(error);
     }
   };
@@ -53,14 +66,14 @@ export default function Register() {
     <div>
       <img src={logo} alt="logo" loading="lazy" className="py-6 px-8 " />
 
-      <div>
+      <div className="mt-20">
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">
           Create your Account
         </h2>
         <p className="text-gray-600 text-center">
           When sports Meets smart Tech.
         </p>
-        <div className="max-w-[480px]  mx-auto mt-16">
+        <div className="max-w-[480px]  mx-auto mt-10">
           <div className="max-w-md mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="grid md:grid-cols-2 md:gap-6 py-3">
@@ -184,7 +197,7 @@ export default function Register() {
 
               <button
                 type="submit"
-                className="w-full my-10 block text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none font-medium rounded-lg text-normal px-5 py-2.5 text-center  "
+                className="w-full my-10 block text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none font-medium rounded-lg text-normal px-5 py-2.5 text-center cursor-pointer"
               >
                 Submit
               </button>
@@ -201,9 +214,9 @@ export default function Register() {
             </div>
 
             <p className="text-center text-sm text-gray-600 mt-4 font-medium">
-              Don’t have an account?{" "}
-              <Link to="/get-started" className="text-green-600 font-medium">
-                Get started
+              Already have an account?{" "}
+              <Link to="/login" className="text-green-600 font-medium">
+                Please Login
               </Link>
             </p>
           </div>
