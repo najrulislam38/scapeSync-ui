@@ -7,6 +7,7 @@ import Login from "@/Pages/Login/Login";
 import Register from "@/Pages/Register/Register";
 import ResetPassword from "@/Pages/ResetPassword/ResetPassword";
 import Verify from "@/Pages/Verify/Verify";
+import ErrorPage from "@/Pages/ErrorPage/ErrorPage";
 
 import { createBrowserRouter } from "react-router";
 
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    ErrorBoundary: ErrorPage,
     children: [
       {
         path: "/",
