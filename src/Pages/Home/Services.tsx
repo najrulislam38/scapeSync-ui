@@ -1,11 +1,17 @@
 import Container from "@/components/Shared/Container";
+import { motion } from "motion/react";
 
 export default function Services() {
   return (
     <div className="py-20">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 * 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="w-fit p-3 bg-[#ECFCEB] rounded-xl">
               <svg
                 viewBox="0 0 24 24"
@@ -107,8 +113,13 @@ export default function Services() {
               Streamlined booking process for clients with service catalogs and
               availability.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 2 * 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="w-fit p-3 bg-[#ECFCEB] rounded-xl">
               <svg
                 viewBox="0 0 24 24"
@@ -175,8 +186,13 @@ export default function Services() {
               Monitor job progress, employee hours, and project timelines with
               live updates.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 3 * 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="w-fit p-3 bg-[#ECFCEB] rounded-xl">
               <svg
                 viewBox="0 0 26 26"
@@ -220,8 +236,13 @@ export default function Services() {
               Comprehensive reporting and insights to improve business
               operations and efficiency.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 4 * 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="w-fit p-3 bg-[#ECFCEB] rounded-xl">
               <svg
                 viewBox="0 0 24 24"
@@ -266,7 +287,7 @@ export default function Services() {
               Enterprise-grade security with 99.9% uptime guarantee and data
               protection.
             </p>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>

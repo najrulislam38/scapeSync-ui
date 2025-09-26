@@ -5,16 +5,28 @@ import SectionTitle from "@/components/Shared/SectionTitle";
 import reviewer1 from "./../../assets/images/reviewers/Ellipse1.png";
 import reviewer2 from "./../../assets/images/reviewers/Ellipse2.png";
 import reviewer3 from "./../../assets/images/reviewers/Ellipse3.png";
+import { motion } from "motion/react";
 
 export default function Reviews() {
   return (
     <div className="py-10 md:py-20">
       <Container>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <SectionTitle title="What Our Users Are Saying" />
           <SectionDescription description="Real stories from clients, employees, and business owners who use our app every day." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-center mt-16 ">
-            <div className=" min-h-[208px] p-7 bg-white shadow-lg shadow-[#F6FCF5]">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1 * 0.2 }}
+              viewport={{ once: true }}
+              className=" min-h-[208px] p-7 bg-white shadow-lg shadow-[#F6FCF5]"
+            >
               <div className=" flex gap-4 items-center">
                 <div className="w-12 h-12">
                   <img
@@ -35,8 +47,14 @@ export default function Reviews() {
                 This app completely changed the way we manage our team.
                 Assigning jobs takes minutes, and we never miss an update.
               </p>
-            </div>
-            <div className=" min-h-[208px] p-7 bg-white shadow-lg shadow-[#F6FCF5]">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2 * 0.2 }}
+              viewport={{ once: true }}
+              className=" min-h-[208px] p-7 bg-white shadow-lg shadow-[#F6FCF5]"
+            >
               <div className=" flex gap-4">
                 <div className="w-12 h-12">
                   <img
@@ -55,8 +73,14 @@ export default function Reviews() {
                 I love how easy it is to see my daily tasks and track my time.
                 It makes my job stress-free.
               </p>
-            </div>
-            <div className=" min-h-[208px] p-7 bg-white shadow-lg shadow-[#F6FCF5]">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3 * 0.2 }}
+              viewport={{ once: true }}
+              className=" min-h-[208px] p-7 bg-white shadow-lg shadow-[#F6FCF5]"
+            >
               <div className=" flex gap-4 items-center">
                 <div className="w-12 h-12">
                   <img
@@ -77,9 +101,9 @@ export default function Reviews() {
                 This app completely changed the way we manage our team.
                 Assigning jobs takes minutes, and we never miss an update.
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </Container>
     </div>
   );

@@ -1,19 +1,28 @@
 import Container from "@/components/Shared/Container";
 import SectionDescription from "@/components/Shared/SectionDescription";
 import SectionTitle from "@/components/Shared/SectionTitle";
+import { motion } from "motion/react";
 
 export default function FAQ() {
   return (
     <div className="py-10 md:py-20 lg:pb-[160px]">
       <Container>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <SectionTitle title="Frequently Asked Questions" />
           <SectionDescription description="Quick answers to help you get the most out of our app." />
-        </div>
+        </motion.div>
         <div className="max-w-[996px] mx-auto mt-8 md:mt-16">
           <div className="flow-root">
             <div className=" flex flex-col gap-4 divide-y divide-gray-200">
-              <details
+              <motion.details
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 * 0.2 }}
+                viewport={{ once: true }}
                 className="group p-6 [&_summary::-webkit-details-marker]:hidden border"
                 open
               >
@@ -55,9 +64,15 @@ export default function FAQ() {
                   Yes! We offer a free plan for individuals and small teams.
                   Paid plans unlock more features for scaling businesses.
                 </p>
-              </details>
+              </motion.details>
 
-              <details className="group p-6 [&_summary::-webkit-details-marker]:hidden border">
+              <motion.details
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 2 * 0.2 }}
+                viewport={{ once: true }}
+                className="group p-6 [&_summary::-webkit-details-marker]:hidden border"
+              >
                 <summary className="flex items-center justify-between gap-1.5 text-gray-900">
                   <h2 className="font-semibold">
                     Can I assign multiple employees to one job?
@@ -98,9 +113,15 @@ export default function FAQ() {
                   Yes! We offer a free plan for individuals and small teams.
                   Paid plans unlock more features for scaling businesses.
                 </p>
-              </details>
+              </motion.details>
 
-              <details className="group p-6 [&_summary::-webkit-details-marker]:hidden border">
+              <motion.details
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 3 * 0.2 }}
+                viewport={{ once: true }}
+                className="group p-6 [&_summary::-webkit-details-marker]:hidden border"
+              >
                 <summary className="flex items-center justify-between gap-1.5 text-gray-900">
                   <h2 className="font-semibold">
                     Does it work on both mobile and desktop?
@@ -141,7 +162,7 @@ export default function FAQ() {
                   Yes! We offer a free plan for individuals and small teams.
                   Paid plans unlock more features for scaling businesses.
                 </p>
-              </details>
+              </motion.details>
             </div>
           </div>
         </div>

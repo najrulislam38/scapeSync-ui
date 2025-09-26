@@ -1,10 +1,17 @@
 import featureImage1 from "./../../../assets/images/Features/Rectangle 161124259.png";
 import RoleRound from "@/components/Shared/RoleRound";
+import { motion } from "motion/react";
 
 export default function BookService() {
   return (
     <div className="w-full flex flex-col md:flex-row items-center gap-10 mt-10">
-      <div className="w-full md:w-1/2">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="w-full md:w-1/2"
+      >
         <RoleRound role="Users" />
         <h3 className="text-xl md:text-2xl text-gray-900 font-bold leading-7 my-4">
           Book services, track progress <br /> and stay updated
@@ -25,8 +32,14 @@ export default function BookService() {
             Schedule appointments at your convenience
           </li>
         </ul>
-      </div>
-      <div className="relative w-full md:w-1/2">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50, x: 50 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.6, delay: 2 * 0.2 }}
+        viewport={{ once: true }}
+        className="relative w-full md:w-1/2"
+      >
         <img
           src={featureImage1}
           alt="Book Service feature image"
@@ -34,7 +47,7 @@ export default function BookService() {
           loading="lazy"
         />
         <div className="h-1/5 w-full z-20 bg-linear-to-t from-[#FCFFFC] to-transparent absolute right-0 bottom-0"></div>
-      </div>
+      </motion.div>
     </div>
   );
 }
